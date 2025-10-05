@@ -1,0 +1,203 @@
+/* ============ Основные стили ============ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+body {
+    background: #000;
+    color: #00FF41;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* ============ LOADING ============ */
+.loading-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #000;
+    transition: opacity .5s ease;
+}
+.spinner {
+    border: 3px solid #111;
+    border-top: 3px solid #00FF41;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ============ AUTH ============ */
+.auth-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.auth-box {
+    background: #0a0a0a;
+    border: 1px solid #00FF41;
+    border-radius: 16px;
+    padding: 30px;
+    width: 320px;
+    text-align: center;
+}
+.tab-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.tab-btn {
+    flex: 1;
+    background: none;
+    border: 1px solid #00FF41;
+    color: #00FF41;
+    padding: 10px;
+    cursor: pointer;
+}
+.tab-btn.active {
+    background: #00FF41;
+    color: #000;
+}
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.auth-form input {
+    background: #111;
+    border: 1px solid #00FF41;
+    color: #00FF41;
+    padding: 10px;
+    border-radius: 8px;
+}
+.auth-form button {
+    background: #00FF41;
+    border: none;
+    color: #000;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* ============ CHAT ============ */
+.chat-screen {
+    display: flex;
+    height: 100vh;
+}
+.sidebar {
+    width: 30%;
+    background: #0a0a0a;
+    border-right: 1px solid #00FF41;
+    display: flex;
+    flex-direction: column;
+}
+.profile {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #00FF41;
+}
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.profile-info {
+    margin-left: 10px;
+}
+.main-btn {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #00FF41;
+    background: none;
+    color: #00FF41;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.chats-list {
+    flex: 1;
+    overflow-y: auto;
+}
+.chat-item {
+    padding: 15px;
+    border-bottom: 1px solid #111;
+    cursor: pointer;
+}
+.chat-item:hover {
+    background: #111;
+}
+
+/* ============ MESSAGES ============ */
+.chat-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.chat-header {
+    border-bottom: 1px solid #00FF41;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.messages-container {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+.message {
+    margin-bottom: 10px;
+}
+.message.sent {
+    text-align: right;
+}
+.message-bubble {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: #00FF41;
+    color: #000;
+    max-width: 70%;
+}
+.message.sent .message-bubble {
+    background: #003300;
+    color: #00FF41;
+}
+.message-time {
+    font-size: 10px;
+    opacity: 0.7;
+    margin-top: 4px;
+}
+.message-input {
+    display: flex;
+    border-top: 1px solid #00FF41;
+}
+.message-input textarea {
+    flex: 1;
+    background: #000;
+    color: #00FF41;
+    border: none;
+    padding: 10px;
+    resize: none;
+}
+.message-input button {
+    background: #00FF41;
+    border: none;
+    color: #000;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* ============ HELPERS ============ */
+.hidden {
+    display: none !important;
+}
