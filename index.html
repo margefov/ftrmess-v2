@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FTR Messenger</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ==================== LOADING ==================== -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="spinner"></div>
+        <h2>FTR Messenger</h2>
+    </div>
+
+    <!-- ==================== AUTH SCREEN ==================== -->
+    <div id="authScreen" class="auth-screen hidden">
+        <div class="auth-box">
+            <h2>Добро пожаловать 👋</h2>
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="login">Вход</button>
+                <button class="tab-btn" data-tab="register">Регистрация</button>
+            </div>
+
+            <form id="loginForm" class="auth-form">
+                <input type="text" id="loginUsername" placeholder="Логин" required>
+                <input type="password" id="loginPassword" placeholder="Пароль" required>
+                <button type="submit">Войти</button>
+            </form>
+
+            <form id="registerForm" class="auth-form hidden">
+                <input type="text" id="regUsername" placeholder="Придумай логин" required>
+                <input type="password" id="regPassword" placeholder="Пароль" required>
+                <input type="password" id="regConfirmPassword" placeholder="Повтори пароль" required>
+                <button type="submit">Создать аккаунт</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==================== CHAT SCREEN ==================== -->
+    <div id="chatScreen" class="chat-screen hidden">
+        <div class="sidebar">
+            <div class="profile">
+                <img id="userAvatar" src="assets/shield.png" alt="avatar">
+                <div class="profile-info">
+                    <span id="username">Anonymous</span>
+                    <button id="changeAvatarBtn" class="small-btn">🖼️</button>
+                    <input type="file" id="avatarInput" accept="image/*" hidden>
+                </div>
+            </div>
+            <button id="newChatBtn" class="main-btn">+ Новый чат</button>
+            <input type="text" id="searchChats" placeholder="Поиск">
+            <div id="chatsList" class="chats-list"></div>
+        </div>
+
+        <div class="chat-area">
+            <div class="chat-header">
+                <button id="backBtn" class="small-btn hidden">←</button>
+                <span id="contactName">Выберите чат</span>
+            </div>
+
+            <div id="messagesContainer" class="messages-container"></div>
+
+            <div class="message-input">
+                <textarea id="messageInput" placeholder="Введите сообщение..."></textarea>
+                <button id="sendBtn">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
