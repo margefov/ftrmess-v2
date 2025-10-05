@@ -1,0 +1,13 @@
+<!-- assets/shield.svg -->
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" rx="40" fill="black"/>
+  <path d="M100 30L160 60V110C160 145 135 170 100 180C65 170 40 145 40 110V60L100 30Z" 
+        stroke="#00FF41" 
+        stroke-width="6" 
+        fill="none" 
+        stroke-linejoin="round"/>
+  <path d="M100 65V115M100 135H100.1" 
+        stroke="#00FF41" 
+        stroke-width="6" 
+        stroke-linecap="round"/>
+</svg>
